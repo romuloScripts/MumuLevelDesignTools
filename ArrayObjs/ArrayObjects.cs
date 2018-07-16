@@ -13,7 +13,7 @@ public class ArrayObjects: MonoBehaviour {
 	public int xn, zn, yn;
 
 	#if UNITY_EDITOR
-	[EasyButtons.Button("Create Prefabs")]
+	[Button("Create Prefabs")]
 	public void CreateCells() {
 		Transform parent = transform.parent;
 		transform.parent = null;
@@ -80,7 +80,7 @@ public class ArrayObjects: MonoBehaviour {
 		}
 	}
 
-	[EasyButtons.Button("Destroy All")]
+	[Button("Destroy All")]
 	void DestroyAll(){
 		Renderer[] cells = GetComponentsInChildren<Renderer>();
 		foreach (var item in cells) {
